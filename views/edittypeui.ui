@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Page</class>
+ <widget class="QWidget" name="Page">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1,0,0,0">
+     <item>
+      <widget class="QLabel" name="labelTitle">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Name :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="nameField"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelMessage">
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+color:rgb(212, 0, 0);
+}</string>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="buttonMakeCurrent">
+         <property name="accessibleName">
+          <string>blueBackground</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color:rgb(80, 255, 255);
+}</string>
+         </property>
+         <property name="text">
+          <string>Make Current</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="text">
+          <string>&lt;--</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="buttonRemove">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color:rgb(255, 73, 73);
+}</string>
+         </property>
+         <property name="text">
+          <string>Remove</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color:rgb(100, 255, 100);
+}</string>
+         </property>
+         <property name="text">
+          <string>Save</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Page</receiver>
+   <slot>exitPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>63</x>
+     <y>273</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>6</x>
+     <y>174</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Page</receiver>
+   <slot>savePressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>388</x>
+     <y>278</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>222</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonMakeCurrent</sender>
+   <signal>clicked()</signal>
+   <receiver>Page</receiver>
+   <slot>makeCurrentPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>186</x>
+     <y>236</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>262</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonRemove</sender>
+   <signal>clicked()</signal>
+   <receiver>Page</receiver>
+   <slot>removePressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>224</x>
+     <y>270</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>exitPressed()</slot>
+  <slot>savePressed()</slot>
+  <slot>makeCurrentPressed()</slot>
+  <slot>removePressed()</slot>
+ </slots>
+</ui>

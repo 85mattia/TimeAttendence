@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>525</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1,0,0,0">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,1">
+       <item>
+        <widget class="QLabel" name="wifiLabel">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelInOut">
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	
+	font: 20pt &quot;Arial Black&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelOrario">
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+	color:rgb(6, 75, 255);
+	font: 60pt &quot;Arial&quot;;
+}</string>
+       </property>
+       <property name="text">
+        <string>12:23:56</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelMessage">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelType">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0,1">
+       <item>
+        <widget class="QPushButton" name="buttonIn">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color:rgb(100, 255, 100);
+	min-height:70px;
+font-size:25px;
+}</string>
+         </property>
+         <property name="text">
+          <string>IN --&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="buttonMenu">
+         <property name="text">
+          <string>MENU</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="buttonOut">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color:rgb(255, 73, 73);
+min-height:70px;
+font-size:25px;
+}</string>
+         </property>
+         <property name="text">
+          <string>&lt;-- OUT</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonMenu</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>menuPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>327</x>
+     <y>271</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>509</x>
+     <y>10</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonIn</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>inPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>137</x>
+     <y>269</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonOut</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>outPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>394</x>
+     <y>277</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>519</x>
+     <y>165</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>menuPressed()</slot>
+  <slot>inPressed()</slot>
+  <slot>outPressed()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Page</class>
+ <widget class="QWidget" name="Page">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Types</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListView" name="listView">
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="text">
+          <string>+</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color:rgb(80, 255, 255);
+}</string>
+         </property>
+         <property name="text">
+          <string>Set No Type</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Device Name:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="fieldDeviceName"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>&lt;--</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="text">
+          <string>Save</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Page</receiver>
+   <slot>exitPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>57</x>
+     <y>278</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>221</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>Page</receiver>
+   <slot>plusPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>280</x>
+     <y>210</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>195</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listView</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>Page</receiver>
+   <slot>selectionChanged(QModelIndex)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>54</x>
+     <y>128</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>128</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>Page</receiver>
+   <slot>noTypePressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>388</x>
+     <y>210</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>2</x>
+     <y>164</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Page</receiver>
+   <slot>savePressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>323</x>
+     <y>279</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>2</x>
+     <y>260</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>exitPressed()</slot>
+  <slot>plusPressed()</slot>
+  <slot>minusPressed()</slot>
+  <slot>selectionChanged(QModelIndex)</slot>
+  <slot>noTypePressed()</slot>
+  <slot>savePressed()</slot>
+ </slots>
+</ui>

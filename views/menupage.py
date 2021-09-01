@@ -1,0 +1,91 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'menupage.ui'
+#
+# Created by: PyQt5 UI code generator 5.11.3
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_Page(object):
+    def setupUi(self, Page):
+        Page.setObjectName("Page")
+        Page.resize(400, 300)
+        self.gridLayout_2 = QtWidgets.QGridLayout(Page)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.verticalLayout = QtWidgets.QVBoxLayout()
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.gridLayout = QtWidgets.QGridLayout()
+        self.gridLayout.setObjectName("gridLayout")
+        self.pushButton = QtWidgets.QPushButton(Page)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
+        self.pushButton.setSizePolicy(sizePolicy)
+        self.pushButton.setObjectName("pushButton")
+        self.gridLayout.addWidget(self.pushButton, 0, 2, 1, 1)
+        self.buttonLogs = QtWidgets.QPushButton(Page)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.buttonLogs.sizePolicy().hasHeightForWidth())
+        self.buttonLogs.setSizePolicy(sizePolicy)
+        self.buttonLogs.setObjectName("buttonLogs")
+        self.gridLayout.addWidget(self.buttonLogs, 0, 1, 1, 1)
+        self.buttonUsers = QtWidgets.QPushButton(Page)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.buttonUsers.sizePolicy().hasHeightForWidth())
+        self.buttonUsers.setSizePolicy(sizePolicy)
+        self.buttonUsers.setObjectName("buttonUsers")
+        self.gridLayout.addWidget(self.buttonUsers, 0, 0, 1, 1)
+        self.buttonSettings = QtWidgets.QPushButton(Page)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.buttonSettings.sizePolicy().hasHeightForWidth())
+        self.buttonSettings.setSizePolicy(sizePolicy)
+        self.buttonSettings.setObjectName("buttonSettings")
+        self.gridLayout.addWidget(self.buttonSettings, 1, 0, 1, 1)
+        self.verticalLayout.addLayout(self.gridLayout)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.buttonExit = QtWidgets.QPushButton(Page)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.buttonExit.sizePolicy().hasHeightForWidth())
+        self.buttonExit.setSizePolicy(sizePolicy)
+        self.buttonExit.setObjectName("buttonExit")
+        self.horizontalLayout.addWidget(self.buttonExit)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem)
+        self.pushButton_2 = QtWidgets.QPushButton(Page)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.horizontalLayout.addWidget(self.pushButton_2)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.verticalLayout.setStretch(0, 1)
+        self.gridLayout_2.addLayout(self.verticalLayout, 0, 0, 1, 1)
+
+        self.retranslateUi(Page)
+        self.buttonUsers.clicked.connect(Page.usersPressed)
+        self.buttonLogs.clicked.connect(Page.logsPressed)
+        self.buttonSettings.clicked.connect(Page.settingPressed)
+        self.buttonExit.clicked.connect(Page.exitPressed)
+        self.pushButton.clicked.connect(Page.usbPressed)
+        self.pushButton_2.clicked.connect(Page.closeAppPressed)
+        QtCore.QMetaObject.connectSlotsByName(Page)
+
+    def retranslateUi(self, Page):
+        _translate = QtCore.QCoreApplication.translate
+        Page.setWindowTitle(_translate("Page", "Form"))
+        self.pushButton.setText(_translate("Page", "Usb"))
+        self.buttonLogs.setText(_translate("Page", "Logs"))
+        self.buttonUsers.setText(_translate("Page", "Users"))
+        self.buttonSettings.setText(_translate("Page", "Settings"))
+        self.buttonExit.setText(_translate("Page", "<--"))
+        self.pushButton_2.setText(_translate("Page", "Close"))
+

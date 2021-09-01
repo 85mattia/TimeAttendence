@@ -1,0 +1,64 @@
+{
+    "users": [
+        {
+            "name": "pinco",
+            "cardCode": "0008742553",
+            "id": "1",
+            "admin": "0",
+            "lastStatus": "IN",
+            "objectId": "HDYEDS"
+        },
+        {
+            "name": "pallino",
+            "cardCode": "0008757858",
+            "id": "2",
+            "admin": "0",
+            "lastStatus": "OUT",
+            "objectId": "AUBNFP"
+        }
+    ],
+    "logs": [
+        {
+            "userId": "HDYEDS",
+            "datetime": "2021-08-17T15:23:20.958572",
+            "status": "IN",
+            "objectId": "TD1C9V",
+            "downloaded": "0",
+            "typeId": "YNXTI1"
+        },
+        {
+            "userId": "AUBNFP",
+            "datetime": "2021-08-17T15:25:39.540031",
+            "status": "IN",
+            "objectId": "A7DMNL",
+            "downloaded": "0",
+            "typeId": "YNXTI1"
+        },
+        {
+            "userId": "AUBNFP",
+            "datetime": "2021-08-17T15:25:44.966377",
+            "status": "OUT",
+            "objectId": "YXI6ZK",
+            "downloaded": "0",
+            "typeId": "YNXTI1"
+        },
+        {
+            "userId": "AUBNFP",
+            "datetime": "2021-08-17T15:34:06.207578",
+            "status": "OUT",
+            "objectId": "VWA18P",
+            "downloaded": "0",
+            "typeId": ""
+        }
+    ],
+    "types": [
+        {
+            "name": "magazzino",
+            "objectId": "50CKBI"
+        },
+        {
+            "name": "cantieres",
+            "objectId": "YNXTI1"
+        }
+    ]
+}

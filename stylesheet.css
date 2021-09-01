@@ -1,0 +1,65 @@
+*{
+    font-size:15px;
+}
+QPushButton { 
+	color: blue
+}
+QTabWidget::tab-bar {
+	width: 0px; 
+	height: 0px; 
+	margin: 0px; 
+	padding: 0px; 
+	border: none;
+}
+QTabWidget::pane{
+    margin:-9px -9px -9px -9px;
+}
+QTabWidget{
+    background-color:red;
+}
+QPushButton{
+    background-color:lightgray;
+    min-height: 40px;
+}
+QTableView::item{
+    border-right: 0px solid blue;
+    border-left: 0px solid blue;
+    border-top: 0.5px solid #dbdbdb;
+    border-bottom: 0.5px solid #dbdbdb;
+}
+QTabWidget::pane {
+  border: 0px;
+} 
+QHeaderView{
+    background-color:lightgray;
+}
+QSpinBox::up-button{
+    min-width:35px;
+    min-height:20px;
+    subcontrol-origin: margin;
+    subcontrol-position: right;
+    top: -10px;
+    right: 0px;
+}
+QMenuBar{
+    min-height: 0px;
+    background-color:red;
+}
+QStatusBar{
+    min-height: 0px;
+    border: 1px solid white;
+}
+QSpinBox::down-button{
+    min-width:35px;
+    min-height:20px;
+    subcontrol-origin: margin;
+    subcontrol-position: right;
+    bottom: -10px;
+    left: 0px;
+}
+QSpinBox{
+    border: 1px solid lightgray;
+    min-height:36px;
+}
+
+
